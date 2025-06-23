@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Employee {
 
-	public String name;
-	public int age;
-	public double salary;
+	private String name;
+	private int age;
+	private double salary;
 }

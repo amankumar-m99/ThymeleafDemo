@@ -19,7 +19,7 @@ public class HomeController {
 
 	@GetMapping("/data")
 	public String getData(Model m) {
-		List<Employee> employees = new ArrayList<Employee>();
+		List<Employee> employees = new ArrayList<>();
 		employees.add(new Employee("ABC", 30, 12000));
 		employees.add(new Employee("MNO", 32, 18000));
 		employees.add(new Employee("PQR", 40, 32000));
