@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>HomePage</title>
+</head>
+
+<body>
+	<h1>This is DataPage of My Thymeleaf.</h1>
+	<br/>
+	<br/>
+	<br/>
+	<p>Prepared By: <span th:text="${preparedBy}"></span></p>
+	<table border=1>
+		<tr>
+			<th>Employee Name</th>
+			<th>Employee Age</th>
+			<th>Employee Salary</th>
+		</tr>
+		<tr th:each="employee: ${employees}">
+			<td th:text="${employee.name}"></td>
+			<td th:text="${employee.age}"></td>
+			<td th:text="${employee.salary}"></td>
+		</tr>
+	</table>
+</body>
+
+</html>
