@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>My Custom Page</title>
+	<link rel="stylesheet" th:href="@{/myfiles/sample.css}" />
+	<script type="text/javascript" th:src="@{/myfiles/showAlert.js}"></script>
+</head>
+
+<body>
+	<br />
+	<h1 class="my-class">This is Custom Page of My Thymeleaf.</h1>
+	<br />
+	<div class="center-div">
+		<button class="btn" onclick="showAlert()">Show alert</button>
+	</div>
+	<div class="center-div">
+		<img th:src="@{/myfiles/sample_pic.jpg}" />
+	</div>
+	<div class="center-div">
+		<a th:href="@{/data}">Goto Data Page link</a>
+	</div>
+</body>
+
+</html>

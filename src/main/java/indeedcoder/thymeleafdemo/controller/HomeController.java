@@ -28,4 +28,19 @@ public class HomeController {
 		m.addAttribute("employees", employees);
 		return "DataPage";
 	}
+
+	@GetMapping("/myPage")
+	public String getMyPage() {
+		return "MyPage";
+	}
+
+	@GetMapping("/register")
+	public String getRegistrationPage() {
+		return "RegisterPage";
+	}
+
+	@GetMapping("/save")
+	public String getSavePage() {
+		return "SavePage";
+	}
 }
