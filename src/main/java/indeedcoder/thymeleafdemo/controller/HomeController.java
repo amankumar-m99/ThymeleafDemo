@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import indeedcoder.thymeleafdemo.model.Employee;
 
@@ -39,8 +41,10 @@ public class HomeController {
 		return "RegisterPage";
 	}
 
-	@GetMapping("/save")
-	public String getSavePage() {
+	@PostMapping("/save")
+	public String getSavePage(
+			@ModelAttribute Employee employee, Model model) {
+		model.addAttribute("emp", employee);
 		return "SavePage";
 	}
 }
