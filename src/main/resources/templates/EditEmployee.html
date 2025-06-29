@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Edit Employee Page</title>
+	<link rel="stylesheet" th:href="@{/myfiles/sample.css}" />
+	<script type="text/javascript" th:src="@{/myfiles/showAlert.js}"></script>
+</head>
+
+<body>
+	<br />
+	<h1 class="my-class">Edit Employee</h1>
+	<br />
+	<div class="center-div">
+
+		<form action="/save" method="post" th:object="${emp}">
+			<table style="margin:10px auto;">
+				<tr>
+					<th>Name</th>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<th>Age</th>
+					<td><input type="text" th:field="*{age}" /></td>
+				</tr>
+				<tr>
+					<th>Salary</th>
+					<td><input type="text" th:field="*{salary}" /></td>
+				</tr>
+				<tr>
+					<th>Dept</th>
+					<td>
+						<select th:field="*{deptId}">
+							<option value="" selected>--SELECT--</option>
+							<option th:each="ob:${depts}" th:value="${ob.key}" th:text="${ob.value}" />
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th><button class="btn">Submit</button></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+
+</html>
